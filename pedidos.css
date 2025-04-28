@@ -1,0 +1,690 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Contenedor general */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+ 
+}
+.header-full {
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-bar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 250px;
+}
+
+.search-bar button {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.profile {
+  font-weight: bold;
+}
+
+/* Greeting */
+.greeting {
+  margin: 2rem 0;
+}
+
+
+.logo {
+  height: 40px;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem; /* Más pequeño */
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+  color: #333;
+  line-height: 1.1;
+}
+
+.location strong {
+  font-size: 0.9rem;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem; /* Un pequeño espacio entre secciones */
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.3rem;
+  width: 400px; /* Fijo */
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+  flex: 1;
+}
+
+.search-bar button {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* Perfil */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.profile-icon {
+  font-size: 1.5rem;
+}
+
+/*<!-- 	Le pusimos display: grid para que los bloques se acomoden mejor -->*/
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+
+.category {
+  background-color: #FFA726; /* color naranja bonito */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.category h3, .category span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000; /* texto negro */
+}
+
+.restaurantes { background-color: #f7b500; }
+.market { background-color: #ec1361; }
+.cafe { background-color: #fdbd4f; }
+.farmacias { background-color: #a1e6c6; color: #333; }
+.supermercados { background-color: #f1f1f1; color: #333; }
+.bebidas { background-color: #e6e6e6; color: #333; }
+
+/* Sugerencias */
+.sugerencias {
+  margin: 2rem 0;
+}
+
+.cards {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+}
+.cards-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 16px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.cards-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.cards-scroll::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.producto {
+  min-width: 200px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  text-align: center;
+}
+
+.producto {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 150px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.imagen-con-precio {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.imagen-con-precio img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.precio {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: rgba(229, 9, 20, 0.9); /* rojo tipo PedidosYa */
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.producto h3 {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Estética de los enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+a:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Promos */
+.promo {
+  margin: 2rem 0;
+}
+
+.promos {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.promo-card {
+  position: relative; /* 🔥 ESTO LE FALTA 🔥 */
+  overflow: hidden; 
+  flex: 1;
+  min-width: 250px;
+  padding: 1rem;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+.restaurante-promo {
+  background-color: #f7b500;
+  color: #000;
+}
+.img-restaurante {
+  width: 150px; /* tamaño más adecuado */
+  height: auto; /* mantiene la proporción */
+  display: block;
+  margin-top: 10px;
+}
+
+.pagos-promo {
+  background-color: #ec1361;
+}
+
+/* Footer */
+footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.img-restaurante {
+  width: 100px;  /* o cualquier tamaño que prefieras */
+  height: auto;
+  border-radius: 12px;
+  margin-top: 10px;
+  text-align: center;
+
+}
+
+.categoria-img {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.promo-img {
+  background-color: transparent;
+  width: 80px; /* o menos */
+  max-width: 100%; /* 🔥 Esto asegura que no se pase del tamaño */
+  height: auto;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* PROMOCIONES*/
+.promociones {
+  margin-top: 2rem;
+}
+
+.promociones h3 {
+  margin-bottom: 1rem;
+}
+
+.promo-cards {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.promo-card {
+  min-width: 220px;
+  border-radius: 12px;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.promo-card:hover {
+  transform: scale(1.05);
+}
+
+.restaurante {
+  background-color: #ffc107; /* Amarillo */
+  color: black;
+}
+
+.medios {
+  background-color: #e50914; /* Rojo */
+}
+
+.mercados {
+  background-color: #0056ff; /* Azul */
+}
+
+.promo-card h4 {
+  margin-bottom: 0.5rem;
+}
+
+.promo-card p {
+  font-size: 0.9rem;
+}
+
+/*LOS MAS PEDIDOS*/
+.mas-pedidos {
+  margin-top: 2rem;
+}
+
+.mas-pedidos h3 {
+  margin-bottom: 1rem;
+}
+
+.pedidos-cards {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.pedido-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pedido-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pedido-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.pedido-info {
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.pedido-nombre {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+}
+
+.pedido-detalles {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.pedido-rating {
+  font-size: 0.9rem;
+  color: #e50914; /* Rojo tipo PedidosYa */
+  font-weight: bold;
+}
+
+/*LOS MEJORES DE TU ZONA*/
+.mejores-zona, .compras-casa {
+  margin-top: 2rem;
+}
+
+.mejores-zona h3, .compras-casa h3 {
+  margin-bottom: 1rem;
+}
+
+.restaurantes {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.restaurante-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  min-width: 300px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.restaurante-card:hover {
+  transform: scale(1.02);
+}
+
+.restaurante-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.restaurante-card .info {
+  padding: 0.5rem;
+}
+
+.restaurante-card .info h4 {
+  margin: 0.5rem 0 0.2rem;
+}
+
+.restaurante-card .info p {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.restaurante-card .rating {
+  font-weight: bold;
+  color: #ffa500;
+  margin-top: 0.5rem;
+}
+
+/* Estilo para "Tus compras desde casa" */
+
+.compras-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.compra-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 0.5rem;
+  width: 300px;
+  background: #fff;
+  transition: transform 0.2s ease;
+}
+
+.compra-card:hover {
+  transform: scale(1.02);
+}
+
+.compra-card img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+
+.compra-card .info h4 {
+  margin: 0;
+}
+
+.compra-card .info p {
+  font-size: 0.8rem;
+  color: gray;
+}
+/*ultima parte*/
+.top-info {
+ 
+  background-color: #00d2ff; /* ese celeste vibrante */
+  padding: 2rem 0;
+}
+
+.top-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hero-image {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.top-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.detail .icono {
+  width: 50px;
+  height: 50px;
+}
+
+.detail h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.detail p {
+  margin: 0;
+  color: #000;
+  font-size: 0.9rem;
+}
+/*Penultima parte*/
+.info-section {
+  background-color: #f5f5f5; /* Un gris muy claro */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 80px;
+  flex-wrap: wrap;
+}
+
+.info-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.info-text h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.info-text p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.info-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-image img {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+
+
+/*FOOTER*/
+.site-footer {
+  background-color: #e90053;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-line {
+  border: 0;
+  border-top: 1px solid white;
+  margin: 1.5rem 0;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.85rem;
+}
