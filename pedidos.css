@@ -219,7 +219,7 @@ header {
   flex-shrink: 0;
   scroll-snap-align: start;
   text-align: center;
-}
+}s
 
 .producto {
   background-color: white;
@@ -688,3 +688,23 @@ footer {
   margin: 0;
   font-size: 0.85rem;
 }
+@media (max-width: 768px) {
+  .top-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .top-details {
+    align-items: center;
+  }
+
+  .top-info {
+    padding: 1rem;
+  }
+
+  .detail h4, .detail p {
+    text-align: center;
+  }
+}
+
